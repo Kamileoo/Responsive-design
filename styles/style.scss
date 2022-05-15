@@ -1,0 +1,177 @@
+$font_size: 16px;
+$box-color: rgb(224, 228, 204);
+$my_padding: 20px;
+$text_padding: 20px;
+$header_img_size: 65px;
+$header_logo_size: 80px;
+
+/* Mobile */
+@media only screen and (max-width: 599px) {
+    .title {display: none;}
+    .header-choose {display: none !important;}
+    .header {align-items: center;}
+    .col-s-1 {grid-column: span 1;}
+    .col-s-2 {grid-column: span 2;}
+    .col-s-3 {grid-column: span 3;}
+    .col-s-4 {grid-column: span 4;}
+    .col-s-5 {grid-column: span 5;}
+    .col-s-6 {grid-column: span 6;}
+    .col-s-7 {grid-column: span 7;}
+    .col-s-8 {grid-column: span 8;}
+    .col-s-9 {grid-column: span 9;}
+    .col-s-10 {grid-column: span 10;}
+    .col-s-11 {grid-column: span 11;}
+    .col-s-12 {grid-column: span 12;}
+}
+/* Tablet */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    .header-choose {display: none !important;}
+    .header {align-items: center;}
+    .col-m-1 {grid-column: span 1;}
+    .col-m-2 {grid-column: span 2;}
+    .col-m-3 {grid-column: span 3;}
+    .col-m-4 {grid-column: span 4;}
+    .col-m-5 {grid-column: span 5;}
+    .col-m-6 {grid-column: span 6;}
+    .col-m-7 {grid-column: span 7;}
+    .col-m-8 {grid-column: span 8;}
+    .col-m-9 {grid-column: span 9;}
+    .col-m-10 {grid-column: span 10;}
+    .col-m-11 {grid-column: span 11;}
+    .col-m-12 {grid-column: span 12;}
+}
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    .hamburger {display: none;}
+    .col-l-1 {grid-column: span 1;}
+    .col-l-2 {grid-column: span 2;}
+    .col-l-3 {grid-column: span 3;}
+    .col-l-4 {grid-column: span 4;}
+    .col-l-5 {grid-column: span 5;}
+    .col-l-6 {grid-column: span 6;}
+    .col-l-7 {grid-column: span 7;}
+    .col-l-8 {grid-column: span 8;}
+    .col-l-9 {grid-column: span 9;}
+    .col-l-10 {grid-column: span 10;}
+    .col-l-11 {grid-column: span 11;}
+    .col-l-12 {grid-column: span 12;}
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Lucida Sans", Verdana, sans-serif;
+    font-size: $font_size;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: $my_padding $my_padding $my_padding $my_padding;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 2*$font_size;
+    padding: 0;
+    margin: 0 0 0 10px;
+}
+
+.header-box img {
+    width: $header_logo_size;
+    height: $header_logo_size;
+}
+
+.header-choose {
+    display: flex;
+}
+
+.choose {
+    padding: 0 $my_padding;
+}
+
+.hamburger {
+    width: $header_img_size;
+    height: $header_img_size;
+    align-items: center;
+    border: solid;
+    border-radius: 12px;
+    background-color: $box-color;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $my_padding $my_padding;
+    margin: 0 $my_padding $my_padding $my_padding;
+}
+
+.box {
+    border-style: solid;
+    background-color: $box-color;
+}
+
+.box-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box-header p {
+    padding: 10px 40px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5*$font_size;
+    border-style: none none solid solid;
+}
+
+.box-content {
+    padding: $text_padding;
+}
+
+
+#B1 .box-header p{
+    background-color: rgb(105, 210, 231);
+}
+
+#B2 .box-header p{
+    background-color: rgb(243, 134, 48);
+}
+
+#B3 .box-header p{
+    background-color: rgb(233, 174, 175);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $box-color;
+    border-top-style: solid;
+    padding: $my_padding 0;
+}
+
+footer p, footer h3{
+    padding: 0;
+    margin: 0;
+}
+
